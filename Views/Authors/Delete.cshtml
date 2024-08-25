@@ -1,0 +1,27 @@
+@model Books.Models.Author
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Radera författare</h1>
+
+<h3>Är du säker?</h3>
+<div>
+    <h4>Författare</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Namn
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuthorName)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Bekräfta radera" class="btn btn-danger" /> |
+        <a asp-action="Index">Tillbaka</a>
+    </form>
+</div>

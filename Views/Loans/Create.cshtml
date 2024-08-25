@@ -1,0 +1,39 @@
+@model Books.Models.Loan
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Låna bok</h1>
+
+<h4>Låna</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="BookId" class="control-label">Bok att låna</label>
+                <select asp-for="BookId" class="form-control" asp-items="ViewBag.BookId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Borrower" class="control-label">Ditt namn</label>
+                <input asp-for="Borrower" class="form-control" />
+                <span asp-validation-for="Borrower" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Borrowed" class="control-label">Datum för utlåning</label>
+                <input type="Date" asp-for="Borrowed" class="form-control" />
+                <span asp-validation-for="Borrowed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Låna bok" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Books" asp-action="Index">Tillbaka till böcker</a>
+</div>
+

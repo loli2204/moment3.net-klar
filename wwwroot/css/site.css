@@ -1,0 +1,122 @@
+/* Grundläggande stil för hela applikationen med hösttema */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f4ece4; /* Ljus beige för bakgrunden */
+  color: #4a2c2a; /* Mörkbrun textfärg */
+  margin: 0;
+  padding: 0;
+}
+
+/* Huvudrubrik med en varm orange färg */
+h1 {
+  color: #d35400; /* Pumpa-orange */
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* Formulärens utseende */
+form {
+  background-color: #fff3e0; /* Ljusorange bakgrund */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Stil för etiketter och inmatningsfält */
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #8e4e27; /* Mörkare brun */
+}
+
+form .form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #d35400; /* Orange kant */
+  background-color: #fef6e4; /* Mycket ljusorange bakgrund för input */
+}
+
+/* Stilar för knappar */
+.btn-primary {
+  background-color: #e67e22; /* Orange */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background-color: #d35400; /* Mörkare orange */
+}
+
+.btn-danger {
+  background-color: #c0392b; /* Rödbrun */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-danger:hover {
+  background-color: #96281b; /* Mörkare rödbrun */
+}
+
+/* Länkar */
+a {
+  color: #d35400; /* Orange */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Stil för valideringsmeddelanden */
+.text-danger {
+  color: #c0392b; /* Rödbrun */
+  font-weight: bold;
+}
+
+/* Stil för tabeller */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: #fff3e0; /* Ljusorange bakgrund */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e67e22; /* Orange kant */
+}
+
+table th {
+  background-color: #e67e22; /* Orange */
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+table tbody tr:hover {
+  background-color: #fef6e4; /* Mycket ljusorange */
+}
+
+/* Stil för tillbaka-länkar */
+a.btn-link {
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 16px;
+  color: #d35400; /* Orange */
+}

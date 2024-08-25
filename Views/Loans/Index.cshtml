@@ -1,0 +1,51 @@
+@model IEnumerable<Books.Models.Loan>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista över lån</h1>
+
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Bok
+                </th>
+                <th>
+                    Utlånad till
+                </th>
+                <th>
+                    Utlåningsdatum
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Book.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Borrower)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Borrowed)
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@item.Id">Tillbakalämnad?</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    
+}

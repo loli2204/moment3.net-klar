@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Books.Models.Book>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h1 class="text-center">Välkommen till Bokuthyrningen!</h1>
+    <p class="text-center">Utforska vårt bibliotek, hitta din nästa favoritbok och låna den enkelt.</p>
+
+    <hr class="my-4">
+
+    @if (Model.Any())
+    {
+        <h2>Tillgängliga Böcker</h2>
+        <ul>
+            @foreach (var book in Model)
+            {
+                <li><i>@book.Name</i> | Skriven av: @book.Author.AuthorName</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>Inga böcker tillgängliga just nu. Kom tillbaka senare för att se vårt uppdaterade urval.</p>
+    }
+</div>

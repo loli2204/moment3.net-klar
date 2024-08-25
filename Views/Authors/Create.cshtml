@@ -1,0 +1,29 @@
+@model Books.Models.Author
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Lägg till författare</h1>
+
+<h4>Författare</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AuthorName" class="control-label">Namn</label>
+                <input asp-for="AuthorName" class="form-control" />
+                <span asp-validation-for="AuthorName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Lägg till författare" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn-link">Tillbaka</a>
+</div>
